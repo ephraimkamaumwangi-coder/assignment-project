@@ -1,0 +1,265 @@
+/* --- Global Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Enables smooth scrolling when clicking navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #334155; /* Dark slate text for high readability */
+    background-color: #e2e8f0; /* Clean, professional medium-gray background */
+}
+
+/* --- Header & Sticky Navigation --- */
+header {
+    /* Background image with a clean dark-gray gradient overlay */
+    background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), 
+                url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px 20px 20px;
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+/* Makes navigation sticky at the top */
+nav {
+    background-color: #1e293b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect on navigation links */
+nav ul li a:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+/* --- Buttons & Links --- */
+.btn {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 10px 24px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* --- Main Content Layout --- */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #ffffff; /* Crisp white cards standing out against the gray background */
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid #cbd5e1;
+}
+
+h2 {
+    color: #0f172a;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #2563eb;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* --- About Me Section (Flexbox Layout & Minimized Picture) --- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.profile-img {
+    width: 110px;  /* Minimized size */
+    height: 110px; /* Minimized size */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 10px;
+    color: #475569;
+}
+
+/* --- Skills Section --- */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    margin-top: 15px;
+}
+
+.skills-list li {
+    background-color: #f1f5f9;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border-left: 4px solid #2563eb;
+    font-weight: 600;
+    color: #1e293b;
+    flex: 1 1 calc(50% - 15px);
+    border: 1px solid #e2e8f0;
+}
+
+/* --- Projects Section (Flexbox Grid & Transitions) --- */
+.projects-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.project-card {
+    flex: 1 1 calc(50% - 20px);
+    background-color: #f8fafc;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect on project cards */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: #2563eb;
+}
+
+.project-card h3 {
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    margin-bottom: 12px;
+    color: #475569;
+}
+
+/* --- Contact Section --- */
+.contact-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+.contact-form {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    background-color: #ffffff;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    border-top: 1px solid #334155;
+}
